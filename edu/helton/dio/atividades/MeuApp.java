@@ -7,12 +7,12 @@ public class MeuApp{
        
         String primeiroNome = "Helton";
         String segundoNome = "Maxwell";
-        String nomeCompleto = nomeCompleto(primeiroNome, segundoNome);
+        String nomeCompleto = juntarNomes(primeiroNome, segundoNome);
 
-        System.out.println(nomeCompleto);
+        System.out.println(nomeCompleto));
     }
 
-    public static String nomeCompleto (String primeiroNome, String segundoNome){
+    public static String juntarNomes (String primeiroNome, String segundoNome){
         return "Olá, " + primeiroNome.concat(" ").concat(segundoNome);
     }
     
