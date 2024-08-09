@@ -4,6 +4,7 @@ public class SmartTv {
     boolean estadoLigada = false;
     int volume = 20;
     int canal = 1;
+    String escolha = "";
 
 
     public void ligarTelevisao(){
