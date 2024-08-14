@@ -10,37 +10,45 @@ public class Usuario {
 
         do{
             HQ.mostrarStatus();
-            ler.next(HQ.escolha);
+            HQ.escolha = ler.next();
             
             switch (HQ.escolha) {
                 case "ligar":
                     HQ.ligarTelevisao();
-                    
+                    break;
+
                 case "desligar":
                     HQ.desligarTelevisao();
                     break;
+
                 case "c+":
                     HQ.mudarCanalAcima();
-                    
+                    break;
+
                 case "c-":
                     HQ.mudarCanalAbaixo();
-                    
+                    break;
+
                 case "v+":
                     HQ.aumentarVolume();
-                    
+                    break;
+
                 case "v-":
                     HQ.diminuirVolume();
-                    
+                    break;
+
                 case "canal":
                     System.out.println("Digite um canal que deseja mudar: ");
-                    ler.nextInt(HQ.canal);
+                    HQ.canal = ler.nextInt();
                     HQ.mudarCanal(HQ.canal);
-                    
+                    break;
+
                 default:
                     System.out.println("Comando não reconhecido, tente novamente. ");
+                    break;
                     
             }
-        }while(HQ.escolha == "desligar");
+        }while(HQ.escolha != "desligar");
 
         
     }

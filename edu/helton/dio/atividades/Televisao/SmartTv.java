@@ -9,12 +9,10 @@ public class SmartTv {
 
     public void ligarTelevisao(){
         estadoLigada = true;
-        System.out.println("Estado: "+estadoLigada);
     }
     
     public void desligarTelevisao(){
         estadoLigada = false;
-        System.out.println("Estado: "+estadoLigada);
     }
 
 
@@ -24,7 +22,7 @@ public class SmartTv {
             if(volume < 100){
                 volume++;
             }else{
-                System.out.println("Volume: Max");
+                System.out.println("O Volume ja está no máximo");
             }
         }else{
             System.out.println("Você precisa ligar a televisão primeiro. ");
@@ -36,7 +34,7 @@ public class SmartTv {
             if(volume > 0){
                 volume--;
             }else{
-                System.out.println("Volume: Max");
+                System.out.println("O volume ja está no menor valor possível.");
             }
         }
         else{
@@ -80,10 +78,20 @@ public class SmartTv {
     }
 
     public void mostrarStatus(){
+        System.out.println("----Utilize os comandos abaixo----");
+        System.out.println("* Ligar a TV - ligar.");
+        System.out.println("* Desligar a TV - desligar.");
+        System.out.println("* Aumentar o volume - v+");
+        System.out.println("* Diminuir o volume - v-");
+        System.out.println("* Subir canal - c+");
+        System.out.println("* Diminuir canal - c-");
+        System.out.println("* Escolher canal - canal \n");
+
         System.out.println("Estado: "+estadoLigada);
         System.out.println("Volume: "+volume);
         System.out.println("Canal: "+canal);
     }
+
 }
 
 
