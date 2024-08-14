@@ -38,9 +38,7 @@ public class Usuario {
                     break;
 
                 case "canal":
-                    System.out.println("Digite um canal que deseja mudar: ");
-                    HQ.canal = ler.nextInt();
-                    HQ.mudarCanal(HQ.canal);
+                    HQ.mudarCanal();                        
                     break;
 
                 default:

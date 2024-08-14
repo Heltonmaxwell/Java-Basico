@@ -1,11 +1,19 @@
 package edu.helton.dio.atividades.Televisao;
 
+import java.util.Scanner;
+
 public class SmartTv {
+
+    //declaração de variáveis.
+
     boolean estadoLigada = false;
     int volume = 20;
     int canal = 1;
     String escolha = "";
 
+    //criação de objetos.
+
+    Scanner ler = new Scanner(System.in);
 
     public void ligarTelevisao(){
         estadoLigada = true;
@@ -29,6 +37,7 @@ public class SmartTv {
         }
         
     }
+
     public void diminuirVolume(){
         if(estadoLigada == true){
             if(volume > 0){
@@ -69,16 +78,20 @@ public class SmartTv {
         }
     }
 
-    public void mudarCanal(int canalEscolhido){
-        if(estadoLigada == true){
+    public void mudarCanal(){
+        if(estadoLigada){
+            System.out.println("Digite um canal que deseja mudar: ");
+            int canalEscolhido = ler.nextInt();
             if(canalEscolhido > 0 && canalEscolhido < 100){
                 canal = canalEscolhido;
             }
+        }else{
+            System.out.println("Você precisa ligar a Televisão primeiro.");
         }
     }
 
     public void mostrarStatus(){
-        System.out.println("----Utilize os comandos abaixo----");
+        System.out.println("----Utilize os comandos abaixo----\n");
         System.out.println("* Ligar a TV - ligar.");
         System.out.println("* Desligar a TV - desligar.");
         System.out.println("* Aumentar o volume - v+");
