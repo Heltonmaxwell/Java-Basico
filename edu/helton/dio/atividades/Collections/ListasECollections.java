@@ -1,7 +1,10 @@
 package edu.helton.dio.atividades.Collections;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
+import java.util.Iterator;
 
 public class ListasECollections {
 
@@ -24,6 +27,20 @@ public class ListasECollections {
         System.out.println(notas);
 
         for(Double nota: notas) System.out.println(nota);
+
+        System.out.println("A menor nota é: "+ Collections.min(notas));
+
+        //Exiba a soma de todos os valores;
+
+        Iterator<Double> iterator = notas.iterator();
+        double soma = 0d;
+
+        while(iterator.hasNext()){
+            Double next = iterator.next();
+            soma += next;
+        }
+
+        System.out.println(soma);
 
     }
     
