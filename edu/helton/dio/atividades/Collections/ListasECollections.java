@@ -35,12 +35,16 @@ public class ListasECollections {
         Iterator<Double> iterator = notas.iterator();
         double soma = 0d;
 
+        //Para pegar a quantia de elementos de uma collection, utilize o método Size.
+
         while(iterator.hasNext()){
             Double next = iterator.next();
             soma += next;
         }
 
-        System.out.println(soma);
+        System.out.println("A soma de todos os elementos é: "+soma);
+
+        System.err.println("A média é: "+soma/notas.size());
 
     }
     
